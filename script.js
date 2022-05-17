@@ -1,18 +1,19 @@
-let n = 1;
+let n = 97;
 let count = 0;
+let prime = '';
+let isprime = true;
 
-for (let i = 1; i <= n; i++) {
-    if (n % i == 0) {
-        count++;
+for (let i = 2; i <= n; i++) {
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            isprime = false;
+            break;
+        }
     }
+    if (isprime) {
+        prime = prime + i + ' ';
+    }
+    isprime = true;
 }
 
-
-if (n == 0 || n == 1) {
-    count = 9999;
-}
-if (count > 2) {
-    console.log('not prime number')
-} else {
-    console.log('prime number')
-}
+console.log(prime);
