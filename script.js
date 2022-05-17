@@ -1,42 +1,18 @@
-let n = 10;
-let first = 0;
-let second = 1;
-let first1 = 0;
-let second1 = 1;
-let sum_while = 0;
-let sum_for = 0;
-let count = 1;
+let n = 1;
+let count = 0;
 
-
-if (n < 3) {
-    sum_while = 1;
-} else {
-    while (count < n - 1) {
-        sum_while = first1 + second1;
-        first1 = second1;
-        second1 = sum_while;
+for (let i = 1; i <= n; i++) {
+    if (n % i == 0) {
         count++;
     }
 }
 
-console.log(sum_while);
 
-
-if (n < 3) {
-    sum_for = 1;
-} else {
-    for (let i = 1; i < n - 1; i++) {
-        if (n == 2) {
-            sum_for = 1;
-            break;
-        }
-        sum_for = first + second;
-        first = second;
-        second = sum_for;
-    }
+if (n == 0 || n == 1) {
+    count = 9999;
 }
-
-
-console.log(sum_for);
-
-console.log(sum_while == sum_for);
+if (count > 2) {
+    console.log('not prime number')
+} else {
+    console.log('prime number')
+}
