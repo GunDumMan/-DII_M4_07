@@ -1,19 +1,21 @@
-let n = 97;
-let count = 0;
-let prime = '';
-let isprime = true;
+let place = [3];
 
-for (let i = 2; i <= n; i++) {
-    for (let j = 2; j < i; j++) {
-        if (i % j == 0) {
-            isprime = false;
-            break;
-        }
-    }
-    if (isprime) {
-        prime = prime + i + ' ';
-    }
-    isprime = true;
+place[0] = {
+    'name': 'chiang mai',
+    'lat': 19.8046735,
+    'long': 98.9528446,
 }
 
-console.log(prime);
+place[1] = {
+    'name': 'maya',
+    'lat': 18.8046735,
+    'long': 98.4444,
+}
+
+place[2] = {
+    'name': 'central chaing mai',
+    'lat': 18.84,
+    'long': 98.917,
+}
+
+console.log(place[0].name);
